@@ -1,0 +1,35 @@
+#include <iostream> 
+
+using namespace std;
+
+int main() {
+    double temp, converted; 
+    int choice; 
+
+    
+    cout << "1. Celsius to Fahrenheit" << endl;
+    cout << "2. Fahrenheit to Celsius" << endl;
+    cout << "Enter your choice (1 or 2): ";
+    cin >> choice; 
+
+    cout << "Enter the temperature: ";
+    cin >> temp; 
+
+    
+    if (choice == 1) {
+        
+        converted = (temp * 9 / 5) + 32;
+        cout << temp << " Celsius is " << converted << " Fahrenheit." << endl;
+    } 
+    else if (choice == 2) {
+        
+        converted = (temp - 32) * 5 / 9;
+        cout << temp << " Fahrenheit is " << converted << " Celsius." << endl;
+    } 
+    else {
+        
+        cout << "Invalid choice!" << endl;
+    }
+
+    return 0; 
+}
