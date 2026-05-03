@@ -1,0 +1,31 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+    double temp, converted;
+    int choise;
+
+    cout << "1 is converted from C to F" << endl;
+    cout << "2 is converted from F to C" << endl;
+    cout << "please enter the choise" << endl;
+    cin >> choise;
+
+    cout << "enter the temp: ";
+    cin >> temp;
+
+    if (choise == 1) {
+        converted = (temp * 1.8) + 32; 
+        cout << temp << " C is " << converted << " F" << endl;
+    }
+    else if (choise == 2) {
+        converted = (temp - 32) / 1.8; 
+        cout << temp << " F is " << converted << " C" << endl;
+    }
+    else {
+        cout << "invalid choise" << endl;
+    }
+
+    return 0;
+}
