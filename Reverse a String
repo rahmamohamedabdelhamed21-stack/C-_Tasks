@@ -1,31 +1,21 @@
-#include<iostream>
-#include<cmath>
+#include <iostream>  
+#include <string>
+
 using namespace std;
 
-int main()
-{
-    double temp, converted;
-    int choise;
+int main() {
+    string text;  
 
-    cout << "1 is converted from C to F" << endl;
-    cout << "2 is converted from F to C" << endl;
-    cout << "please enter the choise" << endl;
-    cin >> choise;
+    cout << "Enter a string: "; 
+    getline(cin, text); 
 
-    cout << "enter the temp: ";
-    cin >> temp;
+    cout << "Reversed string: "; 
 
-    if (choise == 1) {
-        converted = (temp * 1.8) + 32; 
-        cout << temp << " C is " << converted << " F" << endl;
-    }
-    else if (choise == 2) {
-        converted = (temp - 32) / 1.8; 
-        cout << temp << " F is " << converted << " C" << endl;
-    }
-    else {
-        cout << "invalid choise" << endl;
+
+    for (int i = text.length() - 1; i >= 0; i--) {
+        cout << text[i]; 
     }
 
+    cout << endl; 
     return 0;
 }
